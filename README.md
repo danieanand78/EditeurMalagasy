@@ -1,4 +1,4 @@
-# Projet ISAIA 5 – Traitement Automatique du Malgache
+# Traitement Automatique du Malgache
 
 [![Licence](https://img.shields.io/badge/Licence-MIT-green)](LICENSE)  
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
@@ -181,7 +181,7 @@ Lorsque vous interagissez avec une phrase à aligner, le système recherche les 
 - **Analyse Contextuelle par Bonus** : Pour parer aux phrases ou mots répétés au sein d'un même chapitre, l'algorithme ne s'arrête pas au texte exact. Il évalue la similarité du **contexte gauche** (phrase précédente) et du **contexte droit** (phrase suivante). Une correspondance de contexte applique un boost proportionnel au score de base.
 - **Top 5** : L'outil expurge les résultats se chevauchant dans le temps et vous suggère instantanément les 5 options au score combiné le plus élevé.
 
-[Voir le projet](https://github.com/TovoJB/ManualAligment.git)
+[Voir le projet](https://github.com/danieanand78/ManualAligment.git)
 
 ## 🎙️ Modèle TTS Malagasy (Fine-tuning VITS)
 
