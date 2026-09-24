@@ -1,0 +1,130 @@
+:root {
+  --background: #0f1117;
+  --foreground: #f0ede8;
+  --accent: #e8b96a;
+  --accent-blue: #6a9ee8;
+  --panel-bg: rgba(26, 26, 46, 0.7);
+  --border-color: #2a2a4a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Mono', monospace, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.text-editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.title-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6a7a9a;
+  font-size: 1rem;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.editor-box {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  outline: none;
+  cursor: text;
+}
+
+.editor-box p {
+  margin: 0;
+}
+
+.word-span {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px dashed transparent;
+  transition: all 0.2s;
+}
+
+.word-span:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: rgba(232, 185, 106, 0.1);
+  border-radius: 4px;
+}
+
+.word-span.invalid {
+  color: #ff5555;
+  border-bottom: 1px dashed #ff5555;
+}
+
+.word-span.invalid:hover {
+  background: rgba(255, 85, 85, 0.1);
+}
+
+/* Tooltip styles */
+.tt-container {
+  position: fixed;
+  z-index: 50;
+  background: #151722;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 10px));
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tt-word {
+  font-size: 0.8rem;
+  color: #8b94a7;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.tt-lemma {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.tt-tail {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #151722;
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
